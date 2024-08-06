@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4.1</title>
+
+</head>
+<body>
+    
+    <script>
+        let inputUser = prompt("Користувач, введіть камінь/папір/ножиці");
+        let inputUserValid = inputUser.toLowerCase(); 
+        let responseUser;
+        let responsePC;
+
+        if (inputUserValid === "камінь") {
+            responseUser = inputUserValid;
+            alert(`Користувач вибрав ${responseUser}`)
+        } else if (inputUserValid === "папір") {
+            responseUser = inputUserValid;
+            alert(`Користувач вибрав ${responseUser}`)
+        } else if (inputUserValid === "ножиці") {
+            responseUser = inputUserValid;
+            alert(`Користувач вибрав ${responseUser}`)
+        } else {
+            alert("Користувач помилився!!!!");
+        }
+
+       function getRandomInt(max) {
+        return Math.floor(Math.random() * max);
+        }
+       let randPC = getRandomInt(3);
+        
+
+       // console.log(getRandomInt(3));
+
+       switch (randPC) {
+        case 0: 
+        responsePC = "камінь"
+        alert (`Компютер вибрав: "камінь" ${responsePC}`);
+        break;
+        case 1: 
+        responsePC = "папір"
+        alert (`Компютер вибрав: ${responsePC}`);
+        break;
+        case 2: 
+        responsePC = "ножиці"
+        alert (`Компютер вибрав: ${responsePC}`);
+        break;
+        default: 
+        alert("Компютер помилився!!!!")
+        }
+
+if (responseUser==="камінь" && responsePC==="ножиці"){
+    alert(`користувач: ${responseUser}, комп: ${responsePC} => переможець: користувач`)
+}
+if (responseUser==="ножиці" && responsePC==="камінь"){
+    alert(`користувач: ${responseUser}, комп: ${responsePC} => переможець: комп`)
+}
+
+
+if (responseUser==="ножиці" && responsePC==="папір"){
+    alert(`користувач: ${responseUser}, комп: ${responsePC} => переможець: користувач`)
+}
+if (responseUser==="папір" && responsePC==="ножиці"){
+    alert(`користувач: ${responseUser}, комп: ${responsePC} => переможець: комп`)
+}
+
+if (responseUser==="папір" && responsePC==="камінь"){
+    alert(`користувач: ${responseUser}, комп: ${responsePC} => переможець: користувач`)
+}
+if (responseUser==="камінь" && responsePC==="папір"){
+    alert(`користувач: ${responseUser}, комп: ${responsePC} => переможець: комп`)
+}
+
+if ( (responseUser==="камінь" && responsePC==="камінь") || 
+(responseUser==="папір" && responsePC==="папір" ) ||
+(responseUser==="ножиці" && responsePC==="ножиці") ) {
+    alert("Нічия  !!!!!!!!!!!")
+}
+    </script>
+</body>
+</html>
